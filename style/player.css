@@ -1,0 +1,28 @@
+.p-HZ2wIupwLcG9G99Q {
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+body{
+    margin: 0 !important;
+}
+.bg_sea{
+    background-image: url('../images/ngor-senegal-dronebillede.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.box_d{
+    background-color: #c3c0c0;
+    border-radius: 10px;
+}
+.box_d h4,.box_d p{
+    color: #000;
+    text-decoration: none;
+}
+p{
+    text-decoration: none !important;
+}

@@ -9,7 +9,7 @@
 
 body{
   background-image: url('https://dbpadventures.kinsta.cloud/wp-content/uploads/2020/04/ngor-senegal-dronebillede.jpg');
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   text-align: center;
 }
@@ -240,3 +240,7 @@ body{
     align-items: center;
   }
   
+
+  .box_d{
+    border-radius: 10px;
+  }

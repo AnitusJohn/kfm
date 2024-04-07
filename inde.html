@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css">
+     <link rel="icon" type="image/x-icon" href="/images/kk_fm.png">
+
+    <meta name="keywords" content="குமரி தமிழ் மீடியா - இணைய வானொலி,KUMARI TAMIL MEDIA - ONLINE REDIO,fm,fm tamil, tamilfm ,tamil fm,
+    Tamil FM radio, Tamil radio stations, online Tamil radio, Tamil music, Tamil entertainment">
+    <!-- <link rel="stylesheet" href="./js/script.js"> -->
+    <title>Kumari Tamil Media FM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      /* (A) MATERIAL ICONS */
+      .aWrap .svg-inline--fa {
+        color: white !important;
+      }
+
+      /* (B) WRAPPER */
+      .aWrap {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* allow buttons to wrap into another row on small screens */
+        /* flex-wrap: wrap; */
+        width: 750px !important;
+        padding: 10px 30px;
+        margin: 5px 0;
+        border-radius: 10px;
+        background: black;
+        gap: 1rem;
+        margin-bottom: 50px;
+      }
+
+      .aWrap,
+      .aWrap * {
+        box-sizing: border-box;
+      }
+
+      /* (C) PLAY/PAUSE BUTTON */
+      .aPlay {
+        padding: 0;
+        margin: 0;
+        background: 0;
+        border: 0;
+        cursor: pointer;
+      }
+
+      /* (D) TIME */
+      .aCron {
+        font-size: 14px;
+        color: #cbcbcb;
+        margin: 0 10px;
+      }
+
+      /* (E) RANGE SLIDERS */
+      /* (E1) HIDE DEFAULT */
+      .aWrap input[type="range"] {
+        appearance: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        background: 0;
+      }
+
+      .range,
+      .range-volume {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .range input,
+      .range-volume input {
+        position: relative;
+        z-index: 1;
+      }
+
+      .range .change-range,
+      .range-volume .change-range {
+        position: absolute;
+        left: 0;
+        top: 7px;
+        height: 6px;
+        width: 0px;
+        background-color: rgb(187, 187, 187);
+        border-radius: 10px 0 0 10px;
+      }
+
+      .range-volume .change-range {
+        height: 10px;
+        width: 95%;
+      }
+
+      .under-ranger {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        height: 6px;
+        width: 100%;
+        background-color: rgb(63, 63, 63);
+        border-radius: 10px;
+      }
+
+      .range-volume .under-ranger {
+        height: 10px;
+      }
+
+      .aWrap input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+      }
+
+      /* (E2) CUSTOM SLIDER TRACK */
+      .aWrap input[type="range"]::-webkit-slider-runnable-track {
+        background: transparent;
+        height: 6px;
+        border-radius: 10px;
+      }
+
+      /* (E3) CUSTOM SLIDER BUTTON */
+      .aWrap input[type="range"]::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 0;
+        background: #fff;
+        position: relative;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+
+      .aWrap input[type="range"]::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 0;
+        background: #fff;
+        position: relative;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+
+      /* (F) VOLUME */
+      .aVolIco {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      input.aVolume {
+        width: 100px !important;
+      }
+
+      .aVolume::-webkit-slider-runnable-track {
+        height: 10px !important;
+      }
+
+      .aVolume::-webkit-slider-thumb {
+        margin-top: -3px !important;
+      }
+
+      .aVolume::-moz-range-thumb {
+        margin-top: -3px !important;
+      }
+
+      .volume-container {
+        display: flex;
+        align-items: center;
+      }
+      .logo_kk{
+        display: block;
+        width: 100%;
+
+      }
+      #rssBlock{
+  left:0px;
+  top: -20px;
+  height: 80px;
+  /* background: #FFFFFF; */
+  position: absolute;
+  /* width:1070px; */
+  overflow: hidden;
+}
+
+/*remove p*/
+.cnnContents {
+  width:100%;
+  padding-top: 20px;
+  margin:0 auto;
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: 'Museo';
+  font-weight: 300;
+  color: #fff;
+}
+
+.marqueeStyle {
+  display:inline-block;
+  /* Apply animation to this element */
+  -webkit-animation: scrolling-left1 40s linear infinite;
+  animation: scrolling-left1 40s linear infinite;
+  font-weight: 600;
+}
+
+.marqueeStyle2 {
+  display:inline-block;
+  /* Apply animation to this element */
+  -webkit-animation: scrolling-left2 20s linear infinite;
+  animation: scrolling-left2 20s linear infinite;
+  animation-delay: 10s;
+}
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+      100% {transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);}
+}
+@keyframes scrolling-left2 {
+    0% {transform: translateX(0%);
+        -webkit-transform: translateX(0%);}
+      100% {transform: translateX(-200%);
+          -webkit-transform: translateX(-200%);}
+}
+
+@-webkit-keyframes scrolling-left1 {
+    0% {-webkit-transform: translateX(100%);}
+      100% {-webkit-transform: translateX(-100%);}
+}
+@-webkit-keyframes scrolling-left2 {
+    0% {-webkit-transform: translateX(0%);}
+      100% {-webkit-transform: translateX(-200%);}
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- (B) AUDIO PLAYERS -->
+
+    
+    <div class="ply_list">
+       
+        <div class="logo_kk">
+            <img src="./images/kk_fm.png" alt="">
+        </div>
+        <div id='rssBlock'>
+          <p class="cnnContents">
+              <span class="marqueeStyle">&nbsp;நீங்கள் கேட்டுக் கொண்டிருப்பது குமரி தமிழ் மீடியா - இணைய வானொலி You Are Listening KUMARI TAMIL MEDIA - ONLINE REDIO  </span>
+        <!-- duplicate above, change style to allow continous scroll -->
+               <!-- <span class="marqueeStyle2">&nbsp;நீங்கள் கேட்டுக் கொண்டிருப்பது குமரி தமிழ் மீடியா - இணைய வானொலி You Are Listening KUMARI TAMIL MEDIA - ONLINE REDIO&nbsp;</span> -->
+             </p>
+             </div>
+       
+        <audio id="myAudio" controls autoplay muted>
+          <source src="https://stream.zeno.fm/rp7fbgrkhbquv" type="audio/mpeg" controls autoplay>
+          <!-- <source src="https://stream.zeno.fm/rp7fbgrkhbquv" type="audio/mpeg"> -->
+          Your browser does not support the audio element.
+        </audio>
+
+      
+        <!-- <div class="ply_area">
+            <div
+              class="aWrap"
+              data-src="https://stream.zeno.fm/rp7fbgrkhbquv"
+            >
+              <button class="aPlay" disabled controls autoplay>
+                <span class="aPlayIco" style="color: #fff;" controls autoplay><i class="fa fa-play clr_whit"></i></span>
+              </button>
+              <div class="range">
+                <span class="under-ranger"></span>
+             
+                <input controls autoplay
+                  class="aSeek"
+                  type="range"
+                  min="0"
+                  value="0"
+                  step="1"
+                  disabled
+                /><span class="change-range"></span>
+              </div>
+              <div class="aCron">
+    
+                 <span class="">குமரி தமிழ் மீடியா - இணைய வானொலி</span>
+              </div>
+              <div class="volume-container">
+                <span class="aVolIco"> <i class="fa fa-volume-up"></i></span>
+                <div class="range-volume">
+                  <span class="under-ranger"></span>
+                  <input
+                    class="aVolume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    value="1"
+                    step="0.1"
+                    disabled
+                  /><span class="change-range"></span>
+                </div>
+              </div>
+            </div>
+        </div> -->
+        <div class="row">
+
+          <div class="container"></div>
+        </div>
+        
+        
+    </div>
+    
+
+ <section>
+  <div class="row">
+    jfencjnefjcn
+  </div>
+ </section>
+ 
+
+  
+    <script>
+        const container = document.querySelector('.container');
+const getRandomHeight = (min, max) => ~~(Math.random() * (max - min + 1)) + min;
+
+let lineLength = ~~(window.innerWidth * 0.03);
+let intervalId = null;
+
+const animateEqualizer = () => {
+  intervalId = setInterval(() => {
+    const randomHeight = Array.from(Array(lineLength < 15 ? 15 : lineLength), () =>
+      getRandomHeight(10, ~~(window.innerWidth * 0.1) < 100 ? 100 : ~~(window.innerWidth * 0.1))
+    );
+    
+    const topLines = document.querySelectorAll('.equalizer.top .line');
+    const bottomLines = document.querySelectorAll('.equalizer.bottom .line');
+    
+    randomHeight.forEach((height, idx) => {
+      topLines[idx].style.height = `${height}px`;
+      bottomLines[idx].style.height = `${height}px`;
+    });
+  }, 100);
+}
+
+const createEqualizer = (className) => {
+  const equalizerDiv = document.createElement('div');
+  equalizerDiv.classList.add('equalizer', className);
+  container.appendChild(equalizerDiv);
+}
+
+const createLines = (n, equalizer) => {
+  createEqualizer(equalizer);
+  const parent = document.querySelector(`.equalizer.${equalizer}`);
+  
+  for (let i = 0; i < n; i++) {
+    const lineDiv = document.createElement('div');
+    lineDiv.classList.add('line');
+    parent.appendChild(lineDiv);
+  }
+}
+
+const createContents = () => {
+  const equalizers = ['top', 'bottom'];
+  
+  equalizers.forEach(equalizer => createLines(lineLength, equalizer));
+  animateEqualizer();
+}
+
+const handleResize = () => {
+  clearInterval(intervalId);
+  lineLength = ~~(window.innerWidth * 0.03);
+  const equalizers = document.querySelectorAll('.equalizer');
+  equalizers.forEach(equalizer => equalizer.remove());
+  createContents();
+}
+
+window.addEventListener('resize', handleResize);
+
+createContents();
+    </script>
+  </body>
+</html>
