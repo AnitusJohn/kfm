@@ -18,6 +18,8 @@ body{
 .box_d{
     background-color: #c3c0c0;
     border-radius: 10px;
+    margin-bottom: 10px;
+
 }
 .box_d h4,.box_d p{
     color: #000;
@@ -25,4 +27,12 @@ body{
 }
 p{
     text-decoration: none !important;
+}
+
+footer{
+    background: #000;
+    padding: 50px 0 30px;
+}
+footer div img{
+    width: 100px;
 }

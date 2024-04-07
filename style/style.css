@@ -244,3 +244,7 @@ body{
   .box_d{
     border-radius: 10px;
   }
+  footer ul li a{
+    color: #fff;
+    text-decoration: none !important;
+  }
