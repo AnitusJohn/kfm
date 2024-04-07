@@ -14,6 +14,7 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
+    margin-top: 76px;
 }
 .box_d{
     background-color: #c3c0c0;
