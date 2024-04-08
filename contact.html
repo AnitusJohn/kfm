@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/kk_fm.png">
+
+    <meta name="keywords" content="குமரி தமிழ் மீடியா - இணைய வானொலி,KUMARI TAMIL MEDIA - ONLINE REDIO,fm,fm tamil, tamilfm ,tamil fm,
+    Tamil FM radio, Tamil radio stations, online Tamil radio, Tamil music, Tamil entertainment">
+    <!-- <link rel="stylesheet" href="./js/script.js"> -->
+    <title>Kumari Tamil Media FM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/player.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+
+<style>
+    
+form {
+    background-color: #036;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px !important;
+    cursor: pointer;
+    margin: 20px 0px !important;
+    float: left;
+    width: 100%;
+  }
+  
+  /* button:hover {
+    background-color: #45a049;
+  } */
+  
+  .error {
+    color: #f00;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+</style>
+
+</head>
+
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="nav-toggle">
+        <div class="logo">
+            <a href="https://www.radio.kumaritamil.com/">
+
+                <img style="width: 200px;" src="./images/kk_fm.png" alt="">
+            </a>
+        </div>
+       <ul class="links">
+           <li><a href="https://www.radio.kumaritamil.com/">Home</a></li>
+           <li><a href="./about.html">About</a></li>
+           <li><a href="./programs.html">Programs</a></li>
+           <li><a href="./our_team.html">Our Team</a></li>
+           <li><a href="./contact.html">Contact Us</a></li>
+       </ul>
+       <label for="nav-toggle" class="icon-burger">
+           <div class="line"></div>
+           <div class="line"></div>
+           <div class="line"></div>
+       </label>
+    </nav>
+
+
+ 
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+
+<section style="padding-top: 130px;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe src="https://maps.google.com/maps?q=Nagercoil%2C%20Tamil%20Nadu&t=m&z=14&output=embed&iwloc=near" width="100%" height="400" frameborder="0" style="border:0"></iframe>
+                
+                
+
+            </div>
+
+
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+                
+                    <label for="options">Options:</label>
+                    <select id="options" name="options" required>
+                      <option value="live">live</option>
+                      <option value="Songs">Songs</option>
+                      <option value="Birthday Wishes">Birthday Wishes</option><br>
+                    </select>
+                
+                    <button type="button" onclick="validateForm()">Send to WhatsApp</button>
+                    <div id="errorMessage" class="error"></div> 
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+ 
+
+ <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://www.radio.kumaritamil.com/">
+
+                    <img style="width: 200px;" src="./images/kk_fm.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color: #f26938;">Useful Links</h2>
+                <a href="https://play.google.com/store/apps/details?id=com.kumari">
+
+                    <img style="width: 200px;" src="./images/ply_str.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <h2 style="color: #f26938;">Contact Us</h2>
+
+                <ul>
+                    <li><a href="https://www.radio.kumaritamil.com/">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./our_team.html">Our Team</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="text-center" ><p style="text-decoration: none !important; color: #fff;">2024 All Copy Rights </p></div>
+ </footer>
+
+
+ <script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var options = document.getElementById("options").value;
+
+        var errorElement = document.getElementById("errorMessage");
+
+        // Basic validation
+        if (name === "" || email === "" || phone === "" || options === "") {
+            errorElement.innerHTML = "All fields are required";
+            return;
+        }
+
+        // Email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            errorElement.innerHTML = "Invalid email address";
+            return;
+        }
+
+        // Phone validation (simple check for numbers)
+        if (isNaN(phone)) {
+            errorElement.innerHTML = "Invalid phone number";
+            return;
+        }
+
+        // If all validations pass, create WhatsApp link
+        var whatsappLink = "https://api.whatsapp.com/send?phone=9524927420&text=" +
+            encodeURIComponent(`Name: ${name},Email: ${email},Phone: ${phone},Options: ${options}`);
+
+        // Open WhatsApp link in a new tab
+        window.open(whatsappLink, "_blank");
+
+        // Optional: Reset the form
+        document.getElementById("contactForm").reset();
+        errorElement.innerHTML = "";
+    }
+</script>
+
+<script>
+    /**
+* PHP Email Form Validation - v2.0
+* URL: https://bootstrapmade.com/php-email-form/
+* Author: BootstrapMade.com
+*/
+!(function($) {
+    "use strict";
+  
+    $('form.php-email-form').submit(function(e) {
+      e.preventDefault();
+      
+      var f = $(this).find('.form-group'),
+        ferror = false,
+        emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+  
+      f.children('input').each(function() { // run all inputs
+       
+        var i = $(this); // current input
+        var rule = i.attr('data-rule');
+  
+        if (rule !== undefined) {
+          var ierror = false; // error flag for current input
+          var pos = rule.indexOf(':', 0);
+          if (pos >= 0) {
+            var exp = rule.substr(pos + 1, rule.length);
+            rule = rule.substr(0, pos);
+          } else {
+            rule = rule.substr(pos + 1, rule.length);
+          }
+  
+          switch (rule) {
+            case 'required':
+              if (i.val() === '') {
+                ferror = ierror = true;
+              }
+              break;
+  
+            case 'minlen':
+              if (i.val().length < parseInt(exp)) {
+                ferror = ierror = true;
+              }
+              break;
+  
+            case 'email':
+              if (!emailExp.test(i.val())) {
+                ferror = ierror = true;
+              }
+              break;
+  
+            case 'checked':
+              if (! i.is(':checked')) {
+                ferror = ierror = true;
+              }
+              break;
+  
+            case 'regexp':
+              exp = new RegExp(exp);
+              if (!exp.test(i.val())) {
+                ferror = ierror = true;
+              }
+              break;
+          }
+          i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        }
+      });
+      f.children('textarea').each(function() { // run all inputs
+  
+        var i = $(this); // current input
+        var rule = i.attr('data-rule');
+  
+        if (rule !== undefined) {
+          var ierror = false; // error flag for current input
+          var pos = rule.indexOf(':', 0);
+          if (pos >= 0) {
+            var exp = rule.substr(pos + 1, rule.length);
+            rule = rule.substr(0, pos);
+          } else {
+            rule = rule.substr(pos + 1, rule.length);
+          }
+  
+          switch (rule) {
+            case 'required':
+              if (i.val() === '') {
+                ferror = ierror = true;
+              }
+              break;
+  
+            case 'minlen':
+              if (i.val().length < parseInt(exp)) {
+                ferror = ierror = true;
+              }
+              break;
+          }
+          i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        }
+      });
+      if (ferror) return false;
+  
+      var this_form = $(this);
+      var action = $(this).attr('action');
+  
+      if( ! action ) {
+        this_form.find('.loading').slideUp();
+        this_form.find('.error-message').slideDown().html('The form action property is not set!');
+        return false;
+      }
+      
+      this_form.find('.sent-message').slideUp();
+      this_form.find('.error-message').slideUp();
+      this_form.find('.loading').slideDown();
+  
+      if ( $(this).data('recaptcha-site-key') ) {
+        var recaptcha_site_key = $(this).data('recaptcha-site-key');
+        grecaptcha.ready(function() {
+          grecaptcha.execute(recaptcha_site_key, {action: 'php_email_form_submit'}).then(function(token) {
+            php_email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
+          });
+        });
+      } else {
+        php_email_form_submit(this_form,action,this_form.serialize());
+      }
+      
+      return true;
+    });
+  
+    function php_email_form_submit(this_form, action, data) {
+      $.ajax({
+        type: "POST",
+        url: action,
+        data: data,
+        timeout: 40000
+      }).done( function(msg){
+        if (msg == 'OK') {
+          this_form.find('.loading').slideUp();
+          this_form.find('.sent-message').slideDown();
+          this_form.find("input:not(input[type=submit]), textarea").val('');
+        } else {
+          this_form.find('.loading').slideUp();
+          if(!msg) {
+            msg = 'Form submission failed and no error message returned from: ' + action + '<br>';
+          }
+          this_form.find('.error-message').slideDown().html(msg);
+        }
+      }).fail( function(data){
+        console.log(data);
+        var error_msg = "Form submission failed!<br>";
+        if(data.statusText || data.status) {
+          error_msg += 'Status:';
+          if(data.statusText) {
+            error_msg += ' ' + data.statusText;
+          }
+          if(data.status) {
+            error_msg += ' ' + data.status;
+          }
+          error_msg += '<br>';
+        }
+        if(data.responseText) {
+          error_msg += data.responseText;
+        }
+        this_form.find('.loading').slideUp();
+        this_form.find('.error-message').slideDown().html(error_msg);
+      });
+    }
+  
+  })(jQuery);
+</script>
+</body>
+</html>
